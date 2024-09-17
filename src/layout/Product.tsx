@@ -18,7 +18,7 @@ function Product() {
       };
 
   return (
-    <Box py={10} bg={'gray.100'}>
+    <Box py={10} bg={'gray.200'}>
       <Flex justifyContent="center" alignItems="flex-start">
         {/* Carousel Section */}
         <Box flex="1" maxW="50%">

@@ -2,6 +2,7 @@ import './App.css'
 import Navbar from './components/Navbar'
 import MoneyBackGuarantee from './layout/MoneyBackGuarantee'
 import Product from './layout/Product'
+import Signals from './layout/Signals'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
       <Navbar/>
       <Product/>
       <MoneyBackGuarantee/>
+      <Signals/>
     </>
   )
 }
