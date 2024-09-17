@@ -1,7 +1,14 @@
-import { Box, Flex, Stack, Button, Image } from '@chakra-ui/react';
+import { Box, Flex, Stack, Grid, Image, Text, Button, HStack } from '@chakra-ui/react';
 import Carousal from '../components/Carousal';
 import ProductCard from '../components/ProductCard';
 import pay_methods from '../assets/pay_methods.png';
+import { StarIcon } from '@chakra-ui/icons';
+import perks1 from '../assets/perks1.png';
+import perks2 from '../assets/perks2.png';
+import perks3 from '../assets/perks3.png';
+import perks4 from '../assets/perks4.png';
+import standard1 from '../assets/standard1.png';
+import standard2 from '../assets/standard2.png';
 
 function Product() {
   return (
@@ -14,6 +21,16 @@ function Product() {
         
         {/* Product Cards Section */}
         <Stack flex="1" mx={30}>
+            <Text fontSize="3xl" fontWeight="bold">Firebee Headband</Text>
+            <HStack spacing={1} alignItems="center">
+            {[...Array(5)].map((_, i) => (
+                <StarIcon key={i} color="yellow.500" />
+            ))}
+            <Text fontSize="lg">(267 Reviews)</Text>
+            </HStack>
+            <Text fontSize="md" color="gray.500">
+                Order today and receive your Firebee by June 15th, 2021
+            </Text>
           <ProductCard
             title="Firebee Starter Kit"
             price={379.00}
