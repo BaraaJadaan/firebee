@@ -1,5 +1,6 @@
 import './App.css'
 import Navbar from './components/Navbar'
+import Benefits from './layout/Benefits'
 import MoneyBackGuarantee from './layout/MoneyBackGuarantee'
 import Product from './layout/Product'
 import Signals from './layout/Signals'
@@ -13,6 +14,7 @@ function App() {
       <Product/>
       <MoneyBackGuarantee/>
       <Signals/>
+      <Benefits/>
     </>
   )
 }

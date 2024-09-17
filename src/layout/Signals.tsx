@@ -27,7 +27,7 @@ function Signals() {
         <Flex>
             <Image src={wave} position={'absolute'} left={0} zIndex={-1} />
         </Flex>
-    <Box p={8} mt={20} mx={{base: 30, lg: 40}} >
+    <Box p={8} mt={20} mx={{base: 0, lg: '5%'}} >
       <Stack textAlign="center" mb={10}>
         <Heading fontSize="4xl">Firebee Signals</Heading>
         <Text fontSize="lg" color="gray.600">A signal for every situation</Text>
