@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Box, Text, Stack,HStack, Badge, List, ListItem, ListIcon } from '@chakra-ui/react';
+import React from 'react';
+import { Box, Text, Stack, HStack, Badge, List, ListItem, ListIcon } from '@chakra-ui/react';
 import { CheckCircleIcon } from '@chakra-ui/icons';
 
 interface ProductCardProps {
@@ -9,17 +9,19 @@ interface ProductCardProps {
   perks: string[];
   description: string;
   isMostPopular?: boolean;
+  isSelected: boolean;
+  onCardSelect: (title: string) => void;
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ title, price, oldPrice, perks, description, isMostPopular }) => {
-  const [isSelected, setIsSelected] = useState(false);
+const ProductCard: React.FC<ProductCardProps> = ({ title, price, oldPrice, perks, description, isMostPopular, isSelected, onCardSelect }) => {
 
   const handleCardClick = () => {
-    setIsSelected(!isSelected);
+    onCardSelect(title);
   };
 
   return (
-    <Box 
+    <Box
+      bg='white'
       borderWidth="1px" 
       borderRadius="lg" 
       overflow="hidden" 
@@ -34,14 +36,14 @@ const ProductCard: React.FC<ProductCardProps> = ({ title, price, oldPrice, perks
           <Text fontSize="2xl" fontWeight="bold">{title}</Text>
           
           <HStack spacing={4}>
-          {oldPrice && (
-            <Text  as="s" color="gray.500" fontSize="lg" >
-              ${oldPrice.toFixed(2)}
+            {oldPrice && (
+              <Text as="s" color="gray.500" fontSize="lg" >
+                ${oldPrice.toFixed(2)}
+              </Text>
+            )}
+            <Text fontSize="2xl" color="gray.800" fontWeight="bold">
+              ${price.toFixed(2)}
             </Text>
-          )}
-          <Text fontSize="2xl" color="gray.800" fontWeight="bold">
-            ${price.toFixed(2)}
-          </Text>
           </HStack>
         </HStack>
         {isMostPopular && (
@@ -50,7 +52,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ title, price, oldPrice, perks
           </Badge>
         )}
         
-        <List  spacing={2}>
+        <List spacing={2}>
           {perks.map((perk, index) => (
             <ListItem display={'flex'} alignItems={'center'} key={index}>
               <ListIcon as={CheckCircleIcon} color="green.500" />

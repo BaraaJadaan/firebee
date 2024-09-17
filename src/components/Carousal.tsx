@@ -21,6 +21,7 @@ function CustomPaging() {
         </a>
       );
     },
+    arrows: false,
     dots: true,
     fade: true,
     dotsClass: "slick-dots slick-thumb",
@@ -38,7 +39,7 @@ function CustomPaging() {
             <img 
               src={image} 
               alt={`Slide ${index + 1}`} 
-              style={{ width: '700px', height: 'auto', margin: '0 auto' }} 
+              style={{ width: '650px', height: 'auto', margin: '0 auto'}} 
             />
           </div>
         ))}

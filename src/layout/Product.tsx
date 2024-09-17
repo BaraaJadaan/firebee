@@ -1,4 +1,5 @@
-import { Box, Flex, Stack, Grid, Image, Text, Button, HStack } from '@chakra-ui/react';
+import { useState } from 'react';
+import { Box, Flex, Stack, Grid, GridItem, Image, Text, Button, HStack } from '@chakra-ui/react';
 import Carousal from '../components/Carousal';
 import ProductCard from '../components/ProductCard';
 import pay_methods from '../assets/pay_methods.png';
@@ -11,16 +12,50 @@ import standard1 from '../assets/standard1.png';
 import standard2 from '../assets/standard2.png';
 
 function Product() {
+    const [selectedCard, setSelectedCard] = useState<string | null>(null);
+    const handleCardSelect = (title: string) => {
+        setSelectedCard(title);
+      };
+
   return (
-    <Box p={4}>
+    <Box py={10} bg={'gray.100'}>
       <Flex justifyContent="center" alignItems="flex-start">
         {/* Carousel Section */}
-        <Box flex="1" maxW="700px">
-          <Carousal />
+        <Box flex="1" maxW="50%">
+            <HStack ml={20} spacing={4} position={'absolute'}>
+                <Image src={standard1} alt="Certification 1" boxSize="80px" objectFit="contain" />
+                <Image src={standard2} alt="Certification 2" boxSize="80px" objectFit="contain" />
+            </HStack>
+
+            <Carousal />
+
+            {/* Bottom Left Images Section */}
+            <Box mt={40} ml={10}>
+                <Grid templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' }}  gap={6}>
+                    <GridItem display={'flex'} gap={8} alignItems={'center'}>
+                        <Image w={'50px'} src={perks1} alt="perks1" objectFit={'contain'}/>
+                        <Text fontSize="md">Signal Catalogue Updates Included</Text>
+                    </GridItem>
+                    <GridItem display={'flex'} gap={8} alignItems={'center'}>
+                        <Image w={'50px'} src={perks2} alt="perks1" objectFit={'contain'}/>
+                        <Text fontSize="md">Free Shipping within USA</Text>
+                    </GridItem>
+                    <GridItem display={'flex'} gap={8} alignItems={'center'}>
+                        <Image w={'50px'} src={perks3} alt="perks1" objectFit={'contain'}/>
+                        <Text fontSize="md">Signal Catalogue Updates Included</Text>
+                    </GridItem>
+                    <GridItem display={'flex'} gap={8} alignItems={'center'}>
+                        <Image w={'50px'} src={perks4} alt="perks1" objectFit={'contain'}/>
+                        <Text fontSize="md">Customer Support via E-mail, Phone, and Chat</Text>
+                    </GridItem>
+                </Grid>
+            </Box>
         </Box>
+
+        
         
         {/* Product Cards Section */}
-        <Stack flex="1" mx={30}>
+        <Stack flex="1" mx='5%'>
             <Text fontSize="3xl" fontWeight="bold">Firebee Headband</Text>
             <HStack spacing={1} alignItems="center">
             {[...Array(5)].map((_, i) => (
@@ -42,6 +77,8 @@ function Product() {
             ]}
             description="The starter kit is the most affordable way to get started with Firebee. Pay $299 for the Firebee headband and access to the entire Firebee Signal Catalogue for only $19 a month. Membership can be cancelled anytime. No contracts. Satisfaction guaranteed."
             isMostPopular={true}
+            isSelected={selectedCard === "Firebee Starter Kit"}
+            onCardSelect={handleCardSelect}
           />
           <ProductCard
             title="Founder's Kit"
@@ -52,6 +89,8 @@ function Product() {
               "No Monthly Membership",
             ]}
             description="The Founders kit allows you to get the Firebee headband and lifetime access to the entire Firebee Signal Catalogue for a one-time payment. The Founders kit can be paid through Affirm allowing customers to make small payments of $73 a month."
+            isSelected={selectedCard === "Founder's Kit"}
+            onCardSelect={handleCardSelect}
           />
           <Button
             borderRadius='30px'
@@ -59,12 +98,14 @@ function Product() {
             bg={"green.300"}
             fontWeight={'20'}
             variant="solid"
-            mx={10}
+            mx={20}
             py={6}
           >
             Buy Now
           </Button>
-          <Image src={pay_methods} w='60%' />
+          <HStack justifyContent="center">
+            <Image src={pay_methods} w='60%' />
+          </HStack>
         </Stack>
         
       </Flex>
