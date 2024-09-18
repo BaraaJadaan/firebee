@@ -13,6 +13,7 @@ const theme = extendTheme({
         gray: {
           100: '#FBFBFD',
           200: '#F6F6F6',
+          900: '#12151A',
         },
         green: {
           300: "#07C961",

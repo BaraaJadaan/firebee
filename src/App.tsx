@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Benefits from './layout/Benefits'
 import Content from './layout/Content'
 import FAQ from './layout/FAQ'
+import Footer from './layout/Footer'
 import MoneyBackGuarantee from './layout/MoneyBackGuarantee'
 import Product from './layout/Product'
 import Signals from './layout/Signals'
@@ -19,6 +20,7 @@ function App() {
       <Benefits/>
       <Content/>
       <FAQ/>
+      <Footer/>
     </>
   )
 }

@@ -33,13 +33,11 @@ function FAQ() {
   ];
 
   return (
-    <Box p={8} pt={20} mt={10} textAlign="center" maxW="800px" mx="auto">
-      {/* Title */}
+    <Box p={8} pt={20} mt={10} textAlign="center" maxW="900px" mx="auto">
       <Heading fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }} color="gray.700" mb={8}>
         Frequently Asked Questions
       </Heading>
 
-      {/* Accordion for FAQs */}
       <Accordion allowToggle>
       <Divider borderWidth="1px" borderColor="black" />
 
