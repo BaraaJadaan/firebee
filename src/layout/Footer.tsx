@@ -8,7 +8,6 @@ function Footer() {
     <Box bg="gray.900" color="white" mt={12} position="relative">
       <Box bg="linear-gradient(90deg, rgba(139,242,181,1) 0%, rgba(53,200,235,1) 100%)" h={3} w="100%" />
       
-      {/* Top Section */}
       <Grid
         templateColumns="repeat(auto-fit, minmax(150px, 1fr))"
         gap={8}
@@ -17,21 +16,18 @@ function Footer() {
         mb={8}
         mt={10}
       >
-        {/* About Section */}
         <Stack spacing={2}>
           <Text fontWeight="bold">About</Text>
           <Link href="#" _hover={{ color: 'gray.400' }}>Home</Link>
           <Link href="#" _hover={{ color: 'gray.400' }}>Product</Link>
         </Stack>
 
-        {/* Support Section */}
         <Stack spacing={2}>
           <Text fontWeight="bold">Support</Text>
           <Link href="#" _hover={{ color: 'gray.400' }}>Activate</Link>
           <Link href="#" _hover={{ color: 'gray.400' }}>Login</Link>
         </Stack>
 
-        {/* Social Media Section */}
         <Stack>
           <Text fontWeight="bold">Find Us On</Text>
           <HStack justifyContent={{ base: 'center', md: 'flex-start' }} spacing={4}>
@@ -46,7 +42,6 @@ function Footer() {
 
       <Divider borderColor="gray.600" />
 
-      {/* Bottom Section */}
       <Grid
       
         templateColumns={{ base: '1fr', md: '1fr 1fr' }}
@@ -56,7 +51,6 @@ function Footer() {
         px={{ base: 4, md: 12 }}
         pb={10}
       >
-        {/* Logo and Copyright */}
         <Stack spacing={4} color="gray.400">
           <Box><img src={logo_footer} alt="Logo" style={{ width: '200px' }} /></Box>
           <Text fontSize="sm">© 2020 Firebee Technologies, Inc. All rights reserved.</Text>
@@ -65,13 +59,11 @@ function Footer() {
           </Text>
         </Stack>
 
-        {/* Privacy Policy and Terms */}
         <Text fontSize="sm" color="gray.400" textAlign={{ base: 'center', md: 'right' }} mt={{ base: 4, md: 0 }}>
           <Link href="#">Privacy Policy</Link> | <Link href="#">Terms of Service</Link>
         </Text>
       </Grid>
 
-      {/* Gradient Background */}
       <Image
         src={flare}
         zIndex={-1}

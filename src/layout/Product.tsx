@@ -25,7 +25,6 @@ function Product() {
         flexDirection={{ base: 'column', lg: 'row' }} 
         gap={8}
       >
-        {/* Carousel Section */}
         <Box flex={{ base: '1', lg: '1' }} maxW={{ base: '100%', lg: '50%' }} mx="auto">
           <HStack ml={{ base: 0, lg: 20 }} spacing={4} position={'relative'} mb={{ base: 8, lg: 0 }}>
             <Image src={standard1} alt="Certification 1" boxSize="80px" objectFit="contain" />
@@ -34,7 +33,6 @@ function Product() {
 
           <Carousal />
 
-          {/* Bottom Left Images Section */}
           <Box mt={'120px'} ml={{ base: 0, lg: 10 }}>
             <Grid 
               templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' }}  
@@ -60,7 +58,6 @@ function Product() {
           </Box>
         </Box>
 
-        {/* Product Cards Section */}
         <Stack flex={{ base: '1', lg: '1' }} mx={{ base: '2%', lg: '5%' }} maxW={{ base: '100%', lg: '50%' }} >
           <Text fontSize="3xl" fontWeight="bold">Firebee Headband</Text>
           <HStack spacing={3} alignItems="center" >

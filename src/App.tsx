@@ -1,5 +1,5 @@
 import './App.css'
-import Navbar from './components/Navbar'
+import Navbar from './layout/Navbar'
 import Benefits from './layout/Benefits'
 import Content from './layout/Content'
 import FAQ from './layout/FAQ'
