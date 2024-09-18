@@ -1,7 +1,7 @@
 import { Box, Flex, Image, Text, List, ListItem, ListIcon, Heading, HStack, Divider, Grid, GridItem } from '@chakra-ui/react';
 import { CheckCircleIcon } from '@chakra-ui/icons';
-import product from '../assets/product.png'; // Replace with the correct image path
-import gq from '../assets/gq.png'; // Replace with the correct logo paths
+import product from '../assets/product.png';
+import gq from '../assets/gq.png';
 import guardian from '../assets/guardian.png';
 import nyt from '../assets/nyt.png';
 import mashable from '../assets/mashable.png';
@@ -26,12 +26,10 @@ function Content() {
 
   return (
     <Box p={8} pt={20} mt={10} textAlign="center">
-      {/* Title */}
       <Heading fontSize={"4xl"} color="gray.700" mb={8}>
         What's in the box?
       </Heading>
 
-      {/* Image Section */}
       <Image 
         src={product} 
         alt="What's in the box?" 
@@ -40,17 +38,17 @@ function Content() {
         maxW={{ base: "100%", md: "600px" }} 
       />
 
-      {/* Featured Logos */}
       <Text fontSize={"md"} color="gray.600" mb={4} letterSpacing={3}>
         FEATURED ON
       </Text>
       <Grid 
         templateColumns={{ base: "repeat(3, 1fr)", md: "repeat(6, 1fr)" }} 
-        gap={0}
+        gap={3}
         mb={8}
         justifyItems="center"
         alignItems="center"
-        // mx={{base:0, lg: '350px'}}
+        maxW={'670px'}
+        mx="auto"
       >
         {logos.map((logo, index) => (
           <GridItem key={index}>
@@ -64,17 +62,15 @@ function Content() {
         ))}
       </Grid>
 
-      {/* Divider */}
       <Flex justify="center" align="center" direction="column"> 
         <Divider mb={7} borderWidth="1px" borderColor="gray.300" maxW="700px" w="80%" />
 
-        {/* List of items in the box */}
         <HStack 
           justify="center" 
           spacing={{ base: 4, md: 8, lg: 20 }} 
           fontSize={"xl" } 
           fontWeight="lighter" 
-          flexDirection={{ base: "column", md: "row" }} // Change direction based on screen size
+          flexDirection={{ base: "column", md: "row" }} 
         >
           {itemsInBox.map((item, index) => (
             <List key={index}>
