@@ -8,10 +8,6 @@ function Navbar() {
   return (
     <Box bg="white" boxShadow="sm">
       <Flex h={16} alignItems="center" justifyContent="space-between" maxW="1400px" mx="auto" px={4}>
-        {/* Logo */}
-        
-
-        {/* Desktop Menu */}
         <HStack as="nav" >
         <Box>
           <img src={logo} alt="Logo" style={{ width: '100px' }} />
@@ -24,7 +20,6 @@ function Navbar() {
           </HStack>
         </HStack>
 
-        {/* Actions (Buy Now + Profile Icon) */}
         <Flex alignItems="center">
           <Button
             borderRadius="30px"
@@ -46,7 +41,6 @@ function Navbar() {
             icon={<Avatar size="sm" bg="blue.100" />}
             display={{ base: 'none', md: 'inline-flex' }}
           />
-          {/* Hamburger Menu for Mobile */}
           <IconButton
             size="lg"
             variant="ghost"
@@ -57,7 +51,6 @@ function Navbar() {
           />
         </Flex>
 
-        {/* Mobile Menu Drawer */}
         <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
           <DrawerOverlay />
           <DrawerContent>
