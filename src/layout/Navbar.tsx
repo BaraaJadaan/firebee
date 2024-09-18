@@ -7,16 +7,16 @@ function Navbar() {
 
   return (
     <Box bg="white" boxShadow="sm">
-      <Flex h={16} alignItems="center" justifyContent="space-between" maxW="1400px" mx="auto" px={4}>
-        <HStack as="nav" >
-        <Box>
-          <img src={logo} alt="Logo" style={{ width: '100px' }} />
-        </Box>
-        <HStack ml={10} spacing={10} display={{ base: 'none', md: 'flex' }}>
-          <Box opacity="80%">How It Works</Box>
-          <Box opacity="80%">Signals</Box>
-          <Box opacity="80%">Reviews</Box>
-          <Box opacity="80%">Blog</Box>
+      <Flex h={20} alignItems="center" justifyContent="space-between" maxW="1400px" mx="auto" px={4}>
+        <HStack as="nav">
+          <Box cursor="pointer">
+            <img src={logo} alt="Logo" style={{ width: '120px' }} />
+          </Box>
+          <HStack ml={10} spacing={10} display={{ base: 'none', md: 'flex' }}>
+            <Box opacity="80%" cursor="pointer">How It Works</Box>
+            <Box opacity="80%" cursor="pointer">Signals</Box>
+            <Box opacity="80%" cursor="pointer">Reviews</Box>
+            <Box opacity="80%" cursor="pointer">Blog</Box>
           </HStack>
         </HStack>
 
@@ -30,6 +30,7 @@ function Navbar() {
             px={8}
             py={6}
             mr={7}
+            _hover={{ bg: 'green.400' }} // Change the hover color
             display={{ base: 'none', md: 'inline-flex' }}
           >
             Buy Now
@@ -59,10 +60,10 @@ function Navbar() {
               <img src={logo} alt="Logo" style={{ width: '80px' }} />
             </DrawerHeader>
             <DrawerBody>
-              <Box onClick={onClose} mb={4}>How It Works</Box>
-              <Box onClick={onClose} mb={4}>Signals</Box>
-              <Box onClick={onClose} mb={4}>Reviews</Box>
-              <Box onClick={onClose} mb={4}>Blog</Box>
+              <Box onClick={onClose} mb={4} cursor="pointer">How It Works</Box>
+              <Box onClick={onClose} mb={4} cursor="pointer">Signals</Box>
+              <Box onClick={onClose} mb={4} cursor="pointer">Reviews</Box>
+              <Box onClick={onClose} mb={4} cursor="pointer">Blog</Box>
               <Button
                 borderRadius="30px"
                 color="white"
@@ -71,6 +72,7 @@ function Navbar() {
                 variant="solid"
                 w="full"
                 mt={4}
+                _hover={{ bg: 'green.400' }}
               >
                 Buy Now
               </Button>

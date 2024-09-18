@@ -17,19 +17,19 @@ function Footer() {
         mt={10}
       >
         <Stack spacing={2}>
-          <Text fontWeight="bold">About</Text>
-          <Link href="#" _hover={{ color: 'gray.400' }}>Home</Link>
-          <Link href="#" _hover={{ color: 'gray.400' }}>Product</Link>
+          <Text fontWeight="bold" fontSize={'x-large'}>About</Text>
+          <Link href="#" color="gray.400">Home</Link>
+          <Link href="#" color="gray.400">Product</Link>
         </Stack>
 
         <Stack spacing={2}>
-          <Text fontWeight="bold">Support</Text>
-          <Link href="#" _hover={{ color: 'gray.400' }}>Activate</Link>
-          <Link href="#" _hover={{ color: 'gray.400' }}>Login</Link>
+          <Text fontWeight="bold" fontSize={'x-large'}>Support</Text>
+          <Link href="#" color="gray.400">Activate</Link>
+          <Link href="#" color="gray.400">Login</Link>
         </Stack>
 
         <Stack>
-          <Text fontWeight="bold">Find Us On</Text>
+          <Text fontWeight="bold" fontSize={'x-large'}>Find Us On</Text>
           <HStack justifyContent={{ base: 'center', md: 'flex-start' }} spacing={4}>
             <Link href="#"><Icon as={FaYoutube} boxSize={6} /></Link>
             <Link href="#"><Icon as={FaTwitter} boxSize={6} /></Link>
@@ -66,11 +66,11 @@ function Footer() {
 
       <Image
         src={flare}
-        zIndex={-1}
+        zIndex={1}
         w="100%"
         position="absolute"
         bottom={0}
-        left={0}
+        blendMode={'lighten'}
       />
     </Box>
   );

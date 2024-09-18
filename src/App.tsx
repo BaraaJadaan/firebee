@@ -7,12 +7,14 @@ import Footer from './layout/Footer'
 import MoneyBackGuarantee from './layout/MoneyBackGuarantee'
 import Product from './layout/Product'
 import Signals from './layout/Signals'
+import Offer from './layout/Offer'
 
 function App() {
 
   return (
     <>
       {localStorage.setItem('chakra-ui-color-mode', 'light')}
+      <Offer/>
       <Navbar/>
       <Product/>
       <MoneyBackGuarantee/>

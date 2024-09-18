@@ -26,14 +26,14 @@ function Product() {
         gap={8}
       >
         <Box flex={{ base: '1', lg: '1' }} maxW={{ base: '100%', lg: '50%' }} mx="auto">
-          <HStack ml={{ base: 0, lg: 20 }} spacing={4} position={'relative'} mb={{ base: 8, lg: 0 }}>
+          <HStack ml={{ base: 4, lg: 20 }} spacing={4} position={'relative'} mb={{ base: 8, lg: 0 }}>
             <Image src={standard1} alt="Certification 1" boxSize="80px" objectFit="contain" />
             <Image src={standard2} alt="Certification 2" boxSize="80px" objectFit="contain" />
           </HStack>
 
           <Carousal />
 
-          <Box mt={'120px'} ml={{ base: 0, lg: 10 }}>
+          <Box mt={'120px'} ml={{ base: 4, lg: 10 }}>
             <Grid 
               templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' }}  
               gap={6}
@@ -102,10 +102,12 @@ function Product() {
             fontWeight={'20'}
             variant="solid"
             py={6}
+            mt={3}
+            _hover={{ bg: 'green.400' }}
           >
             Buy Now
           </Button>
-          <HStack justifyContent="center">
+          <HStack justifyContent="center" mt={3}>
             <Image src={pay_methods} w='60%' />
           </HStack>
         </Stack>
