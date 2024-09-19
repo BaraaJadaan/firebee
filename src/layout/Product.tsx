@@ -78,7 +78,7 @@ function Product() {
               "Firebee Headband",
               "$19/month membership, first 2 months free",
             ]}
-            description="The starter kit is the most affordable way to get started with Firebee. Pay $299 for the Firebee headband and access to the entire Firebee Signal Catalogue for only $19 a month. <span Membership can be cancelled anytime. No contracts. Satisfaction guaranteed"
+            description="The starter kit is the most affordable way to get started with Firebee. Pay $299 for the Firebee headband and access to the entire Firebee Signal Catalogue for only $19 a month. Membership can be cancelled anytime. No contracts. Satisfaction guaranteed"
             isMostPopular={true}
             isSelected={selectedCard === "Firebee Starter Kit"}
             onCardSelect={handleCardSelect}
