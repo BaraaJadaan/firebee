@@ -1,9 +1,9 @@
-import { Box, Flex, Image, Text, Stack } from '@chakra-ui/react';
+import { Box, Flex, Image, Text, Stack, Divider } from '@chakra-ui/react';
 import money_guarantee from '../assets/money_guarantee.png';
 
 function MoneyBackGuarantee() {
   return (
-    <Box mx={{base: 30, lg: 60}} py={20} bg="white" borderRadius="lg" boxShadow="sm">
+    <Box mx={{base: 30, lg: 60}} py={20}>
       <Flex justifyContent="center" alignItems="center" flexDirection={{base: 'column', lg: 'row' }} gap={6}>
         <Image src={money_guarantee} alt="30 Day Money Back Guarantee" boxSize="200px" />
         
@@ -14,6 +14,7 @@ function MoneyBackGuarantee() {
           </Text>
         </Stack>
       </Flex>
+      {/* <Divider mt={20} borderWidth="1px" borderColor="gray.300" maxW="800px" mx={'auto'} /> */}
     </Box>
   );
 }
