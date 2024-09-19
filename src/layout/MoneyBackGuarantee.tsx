@@ -1,4 +1,4 @@
-import { Box, Flex, Image, Text, Stack, Divider } from '@chakra-ui/react';
+import { Box, Flex, Image, Text, Stack } from '@chakra-ui/react';
 import money_guarantee from '../assets/money_guarantee.png';
 
 function MoneyBackGuarantee() {
